@@ -1,0 +1,34 @@
+{
+  "name": "playtimeprofit-sc",
+  "version": "1.0.0",
+  "description": "Play Time Profit Contract's",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "hhn": "hardhat node",
+    "deploy-local": "hardhat run --network localhost scripts/deployPlayTimeProfit.js",
+    "deploy-eth-mainnet": "hardhat run --network mainnet scripts/deployPlayTimeProfit.js",
+    "deploy-eth-testnet": "hardhat run --network rinkeby scripts/deployPlayTimeProfit.js",
+    "deploy-bsc-mainnet": "hardhat run --network binanceMainnet scripts/deployPlayTimeProfit.js",
+    "deploy-bsc-testnet": "hardhat run --network binanceTestnet scripts/deployPlayTimeProfit.js"
+  },
+  "author": "Balaji Shetty Pachai <balaji.pachai08@gmail.com>",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-solhint": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.3.1",
+    "hardhat": "^2.3.0",
+    "hardhat-contract-sizer": "^2.1.1",
+    "solidity-coverage": "^0.7.16"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@openzeppelin/contracts": "^4.1.0",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "hardhat": "^2.4.3"
+  }
+}
