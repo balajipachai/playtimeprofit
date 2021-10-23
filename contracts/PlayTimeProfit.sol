@@ -93,7 +93,7 @@ contract PlayTimeProfit is ERC20, Ownable {
         address indexed processor
     );
 
-    constructor() ERC20("PlayTimeProfit", "PTP") {
+    constructor() ERC20("PlayTimeProfit", "PLAYTIME") {
         uint256 _BNBRewardsFee = 11;
         uint256 _liquidityFee = 5;
 

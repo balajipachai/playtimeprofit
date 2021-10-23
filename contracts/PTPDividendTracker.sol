@@ -30,9 +30,11 @@ contract PTPDividendTracker is DividendPayingToken, Ownable {
         bool indexed automatic
     );
 
-    constructor() DividendPayingToken("PTP_Dividend_Tracker", "PTPDT") {
+    constructor()
+        DividendPayingToken("PLAYTIME_Dividend_Tracker", "PLAYTIMEDT")
+    {
         claimWait = 3600;
-        minimumTokenBalanceForDividends = 1000; //must hold 0.001 PTP tokens
+        minimumTokenBalanceForDividends = 1000; //must hold 0.001 PLAYTIME tokens
     }
 
     function _transfer(
@@ -40,13 +42,13 @@ contract PTPDividendTracker is DividendPayingToken, Ownable {
         address,
         uint256
     ) internal override {
-        require(false, "PTP_Dividend_Tracker: No transfers allowed");
+        require(false, "PLAYTIME_Dividend_Tracker: No transfers allowed");
     }
 
     function withdrawDividend() public override {
         require(
             false,
-            "PTP_Dividend_Tracker: withdrawDividend disabled. Use the 'claim' function on the main PlayTimeProfit contract."
+            "PLAYTIME_Dividend_Tracker: withdrawDividend disabled. Use the 'claim' function on the main PlayTimeProfit contract."
         );
     }
 
@@ -63,11 +65,11 @@ contract PTPDividendTracker is DividendPayingToken, Ownable {
     function updateClaimWait(uint256 newClaimWait) external onlyOwner {
         require(
             newClaimWait >= 3600 && newClaimWait <= 86400,
-            "PTP_Dividend_Tracker: claimWait must be updated to between 1 and 24 hours"
+            "PLAYTIME_Dividend_Tracker: claimWait must be updated to between 1 and 24 hours"
         );
         require(
             newClaimWait != claimWait,
-            "PTP_Dividend_Tracker: Cannot update claimWait to same value"
+            "PLAYTIME_Dividend_Tracker: Cannot update claimWait to same value"
         );
         emit ClaimWaitUpdated(newClaimWait, claimWait);
         claimWait = newClaimWait;
