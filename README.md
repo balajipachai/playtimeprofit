@@ -1,4 +1,4 @@
-# rage-contracts
+# playtimeprofit-contracts
 
 # Pre-requisites
 
